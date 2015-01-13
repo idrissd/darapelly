@@ -2,13 +2,33 @@
 <html>
 <head>
   <title>Darapelly</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+<![endif]-->
 </head>
 <body>
-
-<%= yield %>
+<header class="navbar navbar-fixed-top navbar-justified">
+	<div class="container">
+	        <%= link_to "Dara Pelly", '#', id: "logo" %>
+	 <nav>
+		<ul class="nav nav-tabs">
+		  <li role="presentation" class="active"><a href="#">Home</a></li>
+		  <li role="presentation"><a href="#">Project</a></li>
+		  <li role="presentation"><a href="#">News</a></li>
+		  <li role="presentation"><a href="#">Contact/a></li>
+		  <li role="presentation"><a href="#">About Us</a></li>
+		</ul>
+	 </nav>
+	 </div>
+</header>
+    <div class="container">
+      <%= yield %>
+    </div>
 
 </body>
 </html>
